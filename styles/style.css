@@ -1,0 +1,50 @@
+body {
+    /* background-image: url("file:///C:/Users/kirik/Desktop/Dashboard/image/sfondo.jpg"); */
+    background: #FAF6CF;
+}
+
+.nav {
+    margin-right: 30px;
+}
+
+.corpo {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+   /*  background: #EEEAC5; */
+
+}
+
+.card {
+    border-radius: 0px 0px 20px 20px;
+    border-style: outset;
+    border-color: grey;
+    border: size 1px;
+}
+
+.card-header {
+    
+    background: #D4D0B0
+}
+
+.table {
+    background: #D4D0B0;
+    margin-top: 15px;
+}
+
+.table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+/* .progress{
+    height: 20px;
+    border-radius: 1rem;
+} */
+
+th {
+    /* display: flex;*/
+    justify-content: center;
+}

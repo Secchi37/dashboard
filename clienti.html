@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="it">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="styles/style.css" rel="stylesheet">
+
+    <title>Spedizioni espress!</title>
+</head>
+
+<body>
+
+
+    <!-- barra di navigazione -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Spedizioni</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    <a class="nav-link" href="clienti.html">Clienti</a>
+                    <a class="nav-link" href="ordini.html">Ordini <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                            height="16" fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+                        </svg></a>
+                </div>
+            </div>
+            <form class="d-flex">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Clienti</li>
+                    </ol>
+                </nav>
+            </form>
+        </div>
+    </nav>
+
+    <div class="corpo">
+        <!-- barra bottoni accesso -->
+        <div class="p-2 container-fluid">
+            <button type="button" class="btn btn-primary float-left btn-sm" id="listaClienti">Lista clienti</button>
+            <button type="button" class="btn btn-outline-secondary float-left btn-sm" id="inserisciCliente">Inserisci cliente</button>
+            <button type="button" class="btn btn-outline-secondary float-left btn-sm" id="rimuoviCliente">Rimuovi Cliente</button>
+            <button type="button" class="btn btn-outline-secondary float-left btn-sm" id="ottieniSingoloCliente">Ottieni Singolo Cliente</button>
+            <button type="button" class="btn btn-primary float-right btn-sm" id="">...</button>
+        </div>
+
+        <!-- card -->
+        <div class="row my-4">
+            <!-- riga contenuti -->
+            <!-- card incassi -->
+            <div class="col-12 col-md-6 col-lg-2 mb-4 mb-lg-0">
+                <!-- colonna che contiene la card piccola -->
+                <div class="card">
+                    <h6 class="card-header">Incassi</h6>
+                    <div class="card-body">
+                        <h5 class="card-title">€ 91.593</h5>
+                        <p class="card-text"></p>
+                        <p class="card-text text-success"></p>
+                    </div>
+                </div>
+            </div>
+            <!-- card incasso e non incassato -->
+            <div class="col-12 col-md-6 mb-4 mb-lg-0 col-lg-5">
+                <!-- colonna che contiene la card doppia -->
+                <div class="card ">
+                    <div class="row-2 d-flex card-header">
+                        <div class="col">
+                            <h6 style="text-align: left;">Incasso</h6>
+                        </div>
+                        <div class="col">
+                            <h6 style="text-align: right;">Non Incassato</h6>
+                        </div>
+                    </div>
+                    <div class="row card-body">
+                        <div class="col card-title">
+                            <h5 style="text-align: left; color: green;">€ 52.581</h5>
+                        </div>
+                        <div class="col card-title">
+                            <h5 style="text-align: right; color: red;">€ 39.012</h5>
+                        </div>
+                        <div class="row">
+                            <div class="progress">
+                                <div class="progress-bar bg-info" role="progressbar" style="width: 57%"
+                                    aria-valuenow="57" aria-valuemin="0" aria-valuemax="100">57%</div>
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 43%"
+                                    aria-valuenow="43" aria-valuemin="0" aria-valuemax="100">43%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- card Non scaduto e scaduto -->
+            <div class="col-12 col-md-6 mb-4 mb-lg-0 col-lg-5">
+                <div class="card ">
+                    <div class="row-2 d-flex card-header">
+                        <div class="col">
+                            <h6 style="text-align: left;">Non scaduto</h6>
+                        </div>
+                        <div class="col">
+                            <h6 style="text-align: right;">Scaduto</h6>
+                        </div>
+                    </div>
+                    <div class="row card-body">
+                        <div class="col card-title">
+                            <h5 style="text-align: left;color: green;">€ 16.958</h5>
+                        </div>
+                        <div class="col card-title">
+                            <h5 style="text-align: right;color: red;">€ 22.053</h5>
+                        </div>
+                        <div class="row">
+                            <div class="progress">
+                                <div class="progress-bar bg-info" role="progressbar" style="width: 43%"
+                                    aria-valuenow="43" aria-valuemin="0" aria-valuemax="100">43%</div>
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 57%"
+                                    aria-valuenow="57" aria-valuemin="0" aria-valuemax="100">43%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- inizio tabella Clienti-->
+
+        <h5 class="titolotabella">Clienti</h5>
+        <!-- pulsanti -->
+        <div class="row">
+            <div class="col">
+                <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                    <button type="button" class="btn btn-primary btn-sm" id="filtraCliente">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-funnel-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2z" />
+                        </svg> Filtra</button>
+
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-dark dropdown-toggle btn-sm" id="modificaCliente"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-check-square" viewBox="0 0 16 16">
+                                <path
+                                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                                <path
+                                    d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.235.235 0 0 1 .02-.022z" />
+                            </svg> Modifica
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                            <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                            <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                        </ul>
+                    </div>
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-info dropdown-toggle btn-sm" id="scaricaCliente"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-download" viewBox="0 0 16 16">
+                                <path
+                                    d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+                                <path
+                                    d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+                            </svg> Scarica
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                            <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                            <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                        </ul>
+                    </div>
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-primary dropdown-toggle btn-sm" id="stampaCliente"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-printer-fill" viewBox="0 0 16 16">
+                                <path d="M5 1a2 2 0 0 0-2 2v1h10V3a2 2 0 0 0-2-2H5zm6 8H5a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1z"/>
+                                <path d="M0 7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-1v-2a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v2H2a2 2 0 0 1-2-2V7zm2.5 1a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"/>
+                              </svg> Stampa
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                            <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                            <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <form class="d-flex">
+                    <input class="form-control" type="Search" placeholder="Cerca" aria-label="Search">
+                    <button class="btn btn-outline-success btn-sm" id="cercaCliente" type="submit">Cerca</button>
+                </form>
+            </div>
+            <div class="col-lg-2">
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-primary dropdown-toggle btn-sm" id="impostazioniClienti"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-gear-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z" />
+                        </svg></button>
+                    <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        <li><a class="dropdown-item" href="#">Impostazioni 1</a></li>
+                        <li><a class="dropdown-item" href="#">Impostazioni 2</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-primary dropdown-toggle btn-sm" id="accediClienti"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Accedi
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        <li><a class="dropdown-item" href="#">Dipendente</a></li>
+                        <li><a class="dropdown-item" href="#">Ospite</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- tabella Clienti-->
+        <div style="overflow-x:auto;">
+            <table class="table table-striped table-hover">
+                <thead>
+                    <!-- riga titoli -->
+                    <tr>
+                        <th>...</th>
+                        <th>...</th>
+                        <th>...</th>
+                        <th>...</th>
+                        <th><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-square" viewBox="0 0 16 16">
+                                <path
+                                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                            </svg></th>
+                        <th>Nome <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-arrow-down-up" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5zm-7-14a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5z" />
+                            </svg></th>
+                        <th>Cognome <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-arrow-down-up" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5zm-7-14a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5z" />
+                            </svg></th>
+                        <th>Email <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-arrow-down-up" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5zm-7-14a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5z" />
+                            </svg></th>
+                        <th>Password <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-arrow-down-up" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5zm-7-14a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5z" />
+                            </svg></th>
+                        <th>Indirizzo <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-arrow-down-up" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5zm-7-14a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5z" />
+                            </svg></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- prima riga -->
+                    <tr>
+                        <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-trash3-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z" />
+                            </svg></td>
+                        <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                <path
+                                    d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                                <path fill-rule="evenodd"
+                                    d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                            </svg></td>
+                        <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-paperclip" viewBox="0 0 16 16">
+                                <path
+                                    d="M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0V3z" />
+                            </svg></td>
+                        <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
+                            </svg></td>
+                        <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-square" viewBox="0 0 16 16">
+                                <path
+                                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                            </svg></td>
+                        <td>
+                            <div class="btn-group" role="group">
+                                <button id="btnGroupDrop1" type="button" class="btn-primary dropdown-toggle btn-sm"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Text_nome
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                    <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                                    <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="btn-group" role="group">
+                                <button id="btnGroupDrop1" type="button" class="btn-primary dropdown-toggle btn-sm"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Text_cognome
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                    <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                                    <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="btn-group" role="group">
+                                <button id="btnGroupDrop1" type="button" class="btn-primary dropdown-toggle btn-sm"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    text_email@email.com
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                    <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                                    <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>text_nickname</td>
+                        <td>
+                            <div class="btn-group" role="group">
+                                <button id="btnGroupDrop1" type="button" class="btn-primary dropdown-toggle btn-sm"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    text via e numero
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                    <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                                    <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- seconda riga -->
+                    <tr>
+                        <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-trash3-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z" />
+                            </svg></td>
+                        <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                <path
+                                    d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                                <path fill-rule="evenodd"
+                                    d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                            </svg></td>
+                        <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-paperclip" viewBox="0 0 16 16">
+                                <path
+                                    d="M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0V3z" />
+                            </svg></td>
+                        <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
+                            </svg></td>
+                        <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-square" viewBox="0 0 16 16">
+                                <path
+                                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                            </svg></td>
+                        <td>
+                            <div class="btn-group" role="group">
+                                <button id="btnGroupDrop1" type="button" class="btn-primary dropdown-toggle btn-sm"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Text_nome
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                    <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                                    <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="btn-group" role="group">
+                                <button id="btnGroupDrop1" type="button" class="btn-primary dropdown-toggle btn-sm"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Text_cognome
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                    <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                                    <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="btn-group" role="group">
+                                <button id="btnGroupDrop1" type="button" class="btn-primary dropdown-toggle btn-sm"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    text_email@email.com
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                    <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                                    <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>text_nickname</td>
+                        <td>
+                            <div class="btn-group" role="group">
+                                <button id="btnGroupDrop1" type="button" class="btn-primary dropdown-toggle btn-sm"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    text via e numero
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                    <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                                    <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- terza riga -->
+                    <tr>
+                        <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-trash3-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z" />
+                            </svg></td>
+                        <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                <path
+                                    d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                                <path fill-rule="evenodd"
+                                    d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                            </svg></td>
+                        <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-paperclip" viewBox="0 0 16 16">
+                                <path
+                                    d="M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0V3z" />
+                            </svg></td>
+                        <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
+                            </svg></td>
+                        <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-square" viewBox="0 0 16 16">
+                                <path
+                                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                            </svg></td>
+                        <td>
+                            <div class="btn-group" role="group">
+                                <button id="btnGroupDrop1" type="button" class="btn-primary dropdown-toggle btn-sm" 
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Text_nome
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                    <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                                    <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="btn-group" role="group">
+                                <button id="btnGroupDrop1" type="button" class="btn-primary dropdown-toggle btn-sm"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Text_cognome
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                    <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                                    <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="btn-group" role="group">
+                                <button id="btnGroupDrop1" type="button" class="btn-primary dropdown-toggle btn-sm"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    text_email@email.com
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                    <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                                    <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>text_nickname</td>
+                        <td>
+                            <div class="btn-group" role="group">
+                                <button id="btnGroupDrop1" type="button" class="btn-primary dropdown-toggle btn-sm"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    text via e numero
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                    <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                                    <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+
+
+
+    </div> <!-- fine corpo -->
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+
+</body>
+
+
+</html>
