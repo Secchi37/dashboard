@@ -32,9 +32,9 @@ let mycorpo = document.getElementById("mycorpo");
 }); */
 
 
-mycorpo.addEventListener("click",function (evt) {
+/* mycorpo.addEventListener("click",function (evt) {
     evt.preventDefault();
-/* alert("listaClienti.id");
+alert("listaClienti.id");
 alert("inserisciCliente.id");
 alert("inserisciOrdine.id");
 alert("inserisciOrdine.id");
@@ -55,6 +55,6 @@ alert("scaricaOrdini.id");
 alert("stampaOrdini.id");
 alert("cercaOrdini.id");
 alert("impostazioniOrdini.id");
-alert("accediOrdini.id"); */
+alert("accediOrdini.id");
 
-});
+}); */
