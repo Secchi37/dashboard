@@ -11,6 +11,7 @@ window.addEventListener("load", () => {
 	
 			// API URL
 			const base ="https://d765-87-8-204-239.eu.ngrok.io/cliente/lista";
+			
 				
 			// Calling the API
 			fetch(base)
